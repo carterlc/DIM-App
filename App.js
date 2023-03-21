@@ -34,7 +34,7 @@ function VaultScreen({ navigation }) {
       <Pressable style={styles.settings} onPress={() => navigation.navigate('Settings')}>
         <Image source={require('./assets/icons8-settings-24.png')} />
       </Pressable>
-      {items.kinetic.map(item => (
+      {items.map(item => (
         <Pressable key={item.id}>
           <Image
             source={{ uri: item.image }}
