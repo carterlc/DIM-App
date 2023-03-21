@@ -5,14 +5,14 @@
             "name": "The Last Word",
             "type": "HandCannon",
             "price": 1600,
-            "image": "./assets/The_Last_Word_icon.png"
+            "image": "https://static.wikia.nocookie.net/destinypedia/images/e/e9/The_Last_Word_%28Year_1%29_icon.jpg/revision/latest?cb=20151228062342"
         },
         {
             "id": 1,
             "name": "Thorn",
             "type": "HandCannon",
             "price": 1700,
-            "image": "./assets/Thorn_icon.png"
+            "image": "https://static.wikia.nocookie.net/destinypedia/images/d/d6/Thorn_icon.jpg/revision/latest?cb=20150912170726"
         }
     ],
     "Special": [
@@ -21,7 +21,7 @@
             "name": "Ice Breaker",
             "type": "Sniper",
             "price": 900,
-            "image": "./assets/Ice_Breaker_icon.png"
+            "image": "https://static.wikia.nocookie.net/destinypedia/images/4/46/Ice_Breaker_icon.jpg/revision/latest?cb=20150912145416"
         }
     ],
     "Heavy": [
@@ -30,7 +30,7 @@
             "name": "Gjallarhorn",
             "type": "Rocket",
             "power": 1800,
-            "image": "./assets/Gjallarhorn_icon.png"
+            "image": "https://static.wikia.nocookie.net/destinypedia/images/c/c9/Gjallarhorn_%28Year_1%29_icon.jpg/revision/latest?cb=20150912144136"
         }
     ],
     "Armour": [
@@ -39,21 +39,21 @@
             "name": "Helm of Saint-14",
             "type": "Helmet",
             "power": 1700,
-            "image": "./assets/Helm_of_Saint-14-Icon.png"
+            "image": "https://static.wikia.nocookie.net/destinypedia/images/0/04/Helm_of_Saint-14_Icon.jpg/revision/latest?cb=20180326140331"
         },
         {
             "id": 1,
             "name": "Lucky Raspberry",
             "type": "Chess Armour",
             "power": 1600,
-            "image": "./assets/Lucky_Raspberry_Icon.png"
+            "image": "https://static.wikia.nocookie.net/destinypedia/images/1/18/Lucky_Raspberry_Icon.jpg/revision/latest?cb=20180326150836"
         },
         {
             "id": 2,
             "name": "Transversive Steps",
             "type": "Leg Armour",
             "power": 1800,
-            "image": "./assets/Transversive_Steps_Icon.png"
+            "image": "https://static.wikia.nocookie.net/destinypedia/images/b/b2/Transversive_Steps_Icon.jpg/revision/latest?cb=20180326154156"
         }
     ]
 }
