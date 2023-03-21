@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Text, View, BlurView } from 'react-native';
+import { Button, Text, View, BlurView, Pressable, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -15,11 +15,9 @@ function DetailsScreen() {
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
+      <Pressable onPress={() => navigation.navigate('Details')}>
+        <Image source={require('./assets/icons8-settings-24.png')} />
+      </Pressable>
     </View>
   );
 }
@@ -27,11 +25,9 @@ function HomeScreen({ navigation }) {
 function SettingsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
+      <Pressable onPress={() => navigation.navigate('Details')}>
+        <Image source={require('./assets/icons8-settings-24.png')} />
+      </Pressable>
     </View>
   );
 }
@@ -63,30 +59,35 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{ 
+      <Tab.Navigator screenOptions={{
         headerShown: false,
-        tabBarStyle:{
-          backgroundColor:'purple',
-          height:50,
+        tabBarStyle: {
+          backgroundColor: 'purple',
+          height: 50,
           activeTintColor: 'pink',
         },
-        tabBarItemStyle:{
-          backgroundColor:'#B65FCF',
-          margin:5,
-          borderRadius:10,
+        tabBarItemStyle: {
+          backgroundColor: '#B65FCF',
+          margin: 5,
+          borderRadius: 10,
           activeTintColor: 'pink',
         }
-    }}
-      TabBarOptions={{
-        activeTintColor: 'pink',
       }}
-      renderLabel= {{
-        color: 'white',
-      }}
+        TabBarOptions={{
+          activeTintColor: 'pink',
+        }}
+        renderLabel={{
+          color: 'white',
+        }}
       >
         <Tab.Screen name="Home" component={HomeStackScreen} options={{ tabBarBadge: 3 }} />
         <Tab.Screen name="Settings" component={SettingsStackScreen} options={{ tabBarBadge: 999 }} />
       </Tab.Navigator>
     </NavigationContainer>
   );
+
+  const styles = StyleSheet.create({
+
+  })
+
 }
