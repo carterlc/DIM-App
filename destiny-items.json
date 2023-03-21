@@ -1,0 +1,59 @@
+{
+    "kinetic": [
+        {
+            "id": 0,
+            "name": "The Last Word",
+            "type": "HandCannon",
+            "price": 1600,
+            "image": "./assets/The_Last_Word_icon.png"
+        },
+        {
+            "id": 1,
+            "name": "Thorn",
+            "type": "HandCannon",
+            "price": 1700,
+            "image": "./assets/Thorn_icon.png"
+        }
+    ],
+    "Special": [
+        {
+            "id": 0,
+            "name": "Ice Breaker",
+            "type": "Sniper",
+            "price": 900,
+            "image": "./assets/Ice_Breaker_icon.png"
+        }
+    ],
+    "Heavy": [
+        {
+            "id": 0,
+            "name": "Gjallarhorn",
+            "type": "Rocket",
+            "power": 1800,
+            "image": "./assets/Gjallarhorn_icon.png"
+        }
+    ],
+    "Armour": [
+        {
+            "id": 0,
+            "name": "Helm of Saint-14",
+            "type": "Helmet",
+            "power": 1700,
+            "image": "./assets/Helm_of_Saint-14-Icon.png"
+        },
+        {
+            "id": 1,
+            "name": "Lucky Raspberry",
+            "type": "Chess Armour",
+            "power": 1600,
+            "image": "./assets/Lucky_Raspberry_Icon.png"
+        },
+        {
+            "id": 2,
+            "name": "Transversive Steps",
+            "type": "Leg Armour",
+            "power": 1800,
+            "image": "./assets/Transversive_Steps_Icon.png"
+        }
+    ]
+}
