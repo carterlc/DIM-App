@@ -30,25 +30,27 @@ function VaultScreen({ navigation }) {
   console.log('here here')
   console.log(typeof items);
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', color: 'white' }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#202020', color: 'white' }}>
       <Pressable style={styles.settings} onPress={() => navigation.navigate('Settings')}>
         <Image source={require('./assets/icons8-settings-24.png')} />
       </Pressable>
       {items.kinetic.map(item => (
         <Pressable key={item.id}>
-          {/* <Image source={item.image} /> */}
           <Image
-        source={{
-          uri: 'https://reactnative.dev/img/tiny_logo.png',
-        }}
-      />
-          <Text>sgsg sfdgsdfgsd sdfgsgsd sfdgsdgsfdg gsdfgsgsfg fsgsgsg1</Text>
+            source={{ uri: item.image }}
+            style={{ width: 50, height: 50 }}
+          />
         </Pressable>
 
       ))}
     </View>
   );
 }
+
+{/* <Image source={{
+  uri: 'https://reactnative.dev/img/tiny_logo.png',
+}} style={{ width: 50, height: 50 }} /> */}
+
 
 const CharacterStack = createNativeStackNavigator();
 
