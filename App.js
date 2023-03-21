@@ -3,6 +3,7 @@ import { Button, Text, View, BlurView, Pressable, Image, StyleSheet } from 'reac
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import items from './destiny-items.json'
 
 function SettingsScreen() {
   return (
@@ -26,11 +27,25 @@ function CharacterScreen({ navigation }) {
 }
 
 function VaultScreen({ navigation }) {
+  console.log('here here')
+  console.log(typeof items);
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#202020' }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', color: 'white' }}>
       <Pressable style={styles.settings} onPress={() => navigation.navigate('Settings')}>
         <Image source={require('./assets/icons8-settings-24.png')} />
       </Pressable>
+      {items.kinetic.map(item => (
+        <Pressable key={item.id}>
+          {/* <Image source={item.image} /> */}
+          <Image
+        source={{
+          uri: 'https://reactnative.dev/img/tiny_logo.png',
+        }}
+      />
+          <Text>sgsg sfdgsdfgsd sdfgsgsd sfdgsdgsfdg gsdfgsgsfg fsgsgsg1</Text>
+        </Pressable>
+
+      ))}
     </View>
   );
 }
@@ -106,11 +121,10 @@ export default function App() {
             fontWeight: 'bold',
           },
         }}
-
       >
         <Tab.Screen name="Character" component={CharacterStackScreen} />
         <Tab.Screen name="Vault" component={VaultStackScreen} />
       </Tab.Navigator>
-    </NavigationContainer>
+    </NavigationContainer >
   );
 }
