@@ -47,5 +47,12 @@
         "type": "Leg Armour",
         "power": 1800,
         "image": "https://static.wikia.nocookie.net/destinypedia/images/b/b2/Transversive_Steps_Icon.jpg/revision/latest?cb=20180326154156"
+    },
+    {
+        "id": 7,
+        "name": "Claws of Ahamkara",
+        "type": "Gauntlet",
+        "power": 1600,
+        "image": "https://www.bungie.net/common/destiny2_content/icons/90f62236b87badbb2f56c104315f63e2.jpg"
     }
 ]
