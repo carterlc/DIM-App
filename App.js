@@ -83,19 +83,56 @@ function DetailsScreen() {
 
 function CharacterScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, backgroundColor: '#202020', padding: 30 }}>
-      <Pressable style={styles.settings} onPress={() => navigation.navigate('Settings')}>
-        <Image source={require('./assets/icons8-settings-24.png')} />
-      </Pressable>
-      <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold', marginBottom: 10 }}>Gauntlets</Text>
-      <Pressable onPress={() => navigation.navigate('Details')}>
-        <Image
-          source={{ uri: "https://www.bungie.net/common/destiny2_content/icons/90f62236b87badbb2f56c104315f63e2.jpg" }}
-          style={{ width: 60, height: 60 }}
-        />
-      </Pressable >
+    <SafeAreaView>
+      <ScrollView>
+        <View style={{ flex: 1, backgroundColor: '#202020', padding: 30 }}>
+          <Pressable style={styles.settings} onPress={() => navigation.navigate('Settings')}>
+            <Image source={require('./assets/icons8-settings-24.png')} />
+          </Pressable>
+          <View style={{ marginBottom: 20 }}>
+            <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold', marginBottom: 10 }}>Helmet</Text>
+            <Image
+              source={{ uri: "https://www.bungie.net/common/destiny2_content/icons/2d91f4c8918dee930af145567f5c61a2.jpg" }}
+              style={{ width: 60, height: 60 }}
+            />
+          </View>
+          <View style={{ marginBottom: 20 }}>
+            <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold', marginBottom: 10 }}>Gauntlets</Text>
+            <Pressable onPress={() => navigation.navigate('Details')}>
+              <Image
+                source={{ uri: "https://www.bungie.net/common/destiny2_content/icons/90f62236b87badbb2f56c104315f63e2.jpg" }}
+                style={{ width: 60, height: 60 }}
+              />
+            </Pressable>
+          </View>
+          <View style={{ marginBottom: 20 }}>
+            <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold', marginBottom: 10 }}>Chest Armour</Text>
+            <Image
+              source={{ uri: "https://www.bungie.net/common/destiny2_content/icons/0326a190e00dd713c37e6bfb2ec6f75c.jpg" }}
+              style={{ width: 60, height: 60 }}
+            />
+          </View>
+          <View style={{ marginBottom: 20 }}>
+            <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold', marginBottom: 10 }}>Chest Armour</Text>
+            <Image
+              source={{ uri: "https://www.bungie.net/common/destiny2_content/icons/8bb100fe3ea871285da42b130721c33b.jpg" }}
+              style={{ width: 60, height: 60 }}
+            />
+          </View>
+          <View style={{ marginBottom: 20 }}>
+            <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold', marginBottom: 10 }}>Leg Armour</Text>
+            <Image
+              source={{ uri: "https://www.bungie.net/common/destiny2_content/icons/db18e6f6de37f867fcb78091cf95fd70.jpg" }}
+              style={{ width: 60, height: 60 }}
+            />
+          </View>
+          {/* <View style={{ marginBottom: 20, backgroundColor: '#' }}>
+            <Text style={{ color: 'white', fontSize: 16, fontWeight: 'bold', marginBottom: 10 }}>Inventory</Text>
 
-    </View >
+          </View> */}
+        </View >
+      </ScrollView>
+    </SafeAreaView >
   );
 }
 
@@ -108,19 +145,23 @@ function VaultScreen({ navigation }) {
   //   setShowItems([...showItems, itemToAdd])
   // }
   return (
-    <View style={{ flex: 1, backgroundColor: '#202020', color: 'white', flexDirection: 'row', padding: 20, flexWrap: 'wrap' }}>
-      <Pressable style={styles.settings} onPress={() => navigation.navigate('Settings')}>
-        <Image source={require('./assets/icons8-settings-24.png')} />
-      </Pressable>
-      {items.map(item => (
-        <Pressable style={{ margin: 5 }} key={item.id} onPress={() => { addToCharacter(id) }}>
-          <Image
-            source={{ uri: item.image }}
-            style={{ width: 50, height: 50 }}
-          />
-        </Pressable>
-      ))}
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#202020' }}>
+      <ScrollView>
+        <View style={{ color: 'white', flexDirection: 'row', padding: 20, flexWrap: 'wrap' }}>
+          <Pressable style={styles.settings} onPress={() => navigation.navigate('Settings')}>
+            <Image source={require('./assets/icons8-settings-24.png')} />
+          </Pressable>
+          {items.map(item => (
+            <Pressable style={{ margin: 5 }} key={item.id}>
+              <Image
+                source={{ uri: item.image }}
+                style={{ width: 50, height: 50 }}
+              />
+            </Pressable>
+          ))}
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -172,6 +213,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     right: 0,
+    margin: 10
   },
   plainText: {
     backgroundColor: 'white'
@@ -187,9 +229,9 @@ export default function App() {
           backgroundColor: 'black',
           height: 45,
         },
+        tabBarIconStyle: { display: "none" },
       }}
         tabBarOptions={{
-          showIcon: false,
           activeTintColor: 'orange',
           inactiveTintColor: 'gray',
           labelStyle: {
